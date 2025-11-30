@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold-500: #FFD700;
+  --color-emerald-900: #004225;
+}
+
+body, html, #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: #050505; /* Deep black background */
+  overflow: hidden;
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-scaleUp {
+  animation: scaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out forwards;
+}
