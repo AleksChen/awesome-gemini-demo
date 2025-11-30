@@ -1,5 +1,5 @@
 import { Canvas } from '@react-three/fiber'
-import { Environment, OrbitControls, Sparkles, AdaptiveDpr, AdaptiveEvents, PerformanceMonitor } from '@react-three/drei'
+import { Environment, OrbitControls, Sparkles, AdaptiveDpr, AdaptiveEvents } from '@react-three/drei'
 import { EffectComposer, Bloom, Vignette } from '@react-three/postprocessing'
 import React, { Suspense, useEffect, useRef } from 'react'
 import * as THREE from 'three'
@@ -216,7 +216,6 @@ export default function App() {
         camera={{ position: [0, 2, 28], fov: 45 }}
         gl={{ antialias: false, toneMapping: THREE.ACESFilmicToneMapping, toneMappingExposure: 1.5 }}
       >
-        {/* <PerformanceMonitor onDecline={() => appState.quality = 'low'} /> */}
         <AdaptiveDpr pixelated />
         <AdaptiveEvents />
         
